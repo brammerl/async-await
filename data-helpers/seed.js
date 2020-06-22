@@ -7,7 +7,7 @@ const seed = async(input) => {
     const arr = await Promise.all([...Array(5)].map(()=> {
       return Movie.create({
         title: chance.word({ length: 7 }),
-        description: chance.sentence({ words: 20}),
+        description: chance.sentence({ words: 20 }),
         studio: chance.word({ length: 10 })
       });
     }));
